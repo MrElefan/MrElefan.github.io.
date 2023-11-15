@@ -8,6 +8,7 @@
         :root {
             --tg-theme-text-color: #0088cc;
             --tg-theme-bg-color: #005580;
+            --tg-theme-text-color-inverse: #fff;
         }
         body {
             font-family: Arial, sans-serif;
@@ -33,13 +34,26 @@
             padding: 10px 20px;
             font-size: 16px;
             background-color: var(--tg-theme-text-color);
-            color: #fff;
+            color: var(--tg-theme-text-color-inverse);
             border: none;
             cursor: pointer;
             margin-top: 20px;
         }
         button:hover {
             background-color: var(--tg-theme-bg-color);
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: var(--tg-theme-text-color-inverse);
+                background-color: var(--tg-theme-bg-color);
+            }
+            button {
+                background-color: var(--tg-theme-text-color);
+                color: var(--tg-theme-text-color-inverse);
+            }
+            button:hover {
+                background-color: var(--tg-theme-bg-color);
+            }
         }
     </style>
 </head>
@@ -52,3 +66,4 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
 </html>
+
