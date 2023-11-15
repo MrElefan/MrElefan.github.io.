@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Онлайн магазин</title>
     <style>
+        :root {
+            --tg-theme-text-color: #0088cc;
+            --tg-theme-bg-color: #005580;
+        }
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
             text-align: center;
+            color: var(--tg-theme-text-color);
+            background-color: var(--tg-theme-bg-color);
         }
         h1 {
-            color: #0088cc;
+            color: var(--tg-theme-text-color);
         }
         #main {
             max-width: 80%;
@@ -26,14 +32,14 @@
         button {
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #0088cc;
+            background-color: var(--tg-theme-text-color);
             color: #fff;
             border: none;
             cursor: pointer;
             margin-top: 20px;
         }
         button:hover {
-            background-color: #005580;
+            background-color: var(--tg-theme-bg-color);
         }
     </style>
 </head>
